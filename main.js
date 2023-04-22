@@ -91,3 +91,11 @@ class Media {
   //Below will be a movie instance with the following:
 
   const speedMovie = new Movie ('Jan De Bont', 'Speed', 116);
+  speedMovie.toggleCheckedOutStatus(); // Will make it turn to true...
+  console.log(speedMovie.isCheckedOut); // prints true
+
+  speedMovie.addRating(1);
+  speedMovie.addRating(1);
+  speedMovie.addRating(5);
+  // Above I added three ratings to the speed movie...
+  console.log(speedMovie.getAverageRating()); // Avg rating of 2
