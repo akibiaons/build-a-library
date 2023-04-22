@@ -45,7 +45,7 @@ class Media {
   class Book extends Media {
     constructor(author, title, pages) {
      super(title);
-     this.author = author;
+     this._author = author;
      this._pages = pages;
 
     }
@@ -74,3 +74,8 @@ class Media {
       return this._runTime;
     }
   }
+
+  // Below is a book instance 
+  const Eragon = new Book('Christopher Paolini', 'Eragon', 300);
+  Eragon.toggleCheckedOutStatus();
+  console.log(Eragon);
