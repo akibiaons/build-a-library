@@ -74,6 +74,3 @@ class Media {
       return this._runTime;
     }
   }
-
-console.log(Media.isCheckedOut);
-console.log(Media._isCheckedOut);
