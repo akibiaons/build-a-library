@@ -15,21 +15,21 @@ class Media {
     return this._title;
   }
 
-  get avalibility() {
-    return this._checkoutStatus;
+  get isCheckedOut() {
+    return this._isCheckedOut;
   }
 
   get ratings() {
     return this._ratings;
   }
 
-  set avalibility(isCheckedOut) {
-    this._avalibility = isCheckedOut;
+  toggleCheckedOutStatus() {
+    this._isCheckedOut = !this.isCheckedOut;
   }
 
-  toggleCheckedOutStatus() {
-    this._isCheckedOut = !this.avalibility;
-  }
+  set isCheckedOut(isCheckedOut) {
+    this._isCheckedOut = isCheckedOut;
+  } // Something may be off with my checkout method and property as they print undefined
 
   getAverageRating() {
     let sum = this._ratings.reduce((accumulator, rating) => accumulator + rating, 0);
@@ -42,6 +42,11 @@ class Media {
   // added a method to push ratings into the array...
 }
 
-  class book {
-    
+  class Book extends Media {
+    constructor() {
+      
+    }
   }
+
+console.log(Media.isCheckedOut);
+console.log(Media._isCheckedOut);
