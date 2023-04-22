@@ -19,11 +19,21 @@ class Media {
     return this._checkoutStatus;
   }
 
-  get rating() {
+  get ratings() {
     return this._ratings;
   }
 
   set avalibility(isCheckedOut) {
     this._avalibility = isCheckedOut;
   }
+
+  toggleCheckedOutStatus() {
+    this._isCheckedOut = !this.avalibility;
+  }
+
+  getAverageRating() {
+    let sum = this._ratings.reduce((accumulator, rating) => accumulator + rating, 0);
+    return Math.floor(sum / this._ratings.length);
+  }
+  // Above I created a method that returns the average values of the ratings array.
 }
