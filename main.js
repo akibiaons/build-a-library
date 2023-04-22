@@ -62,7 +62,7 @@ class Media {
   class Movie extends Media {
     constructor(director, title, runTime) {
       super(title);
-      this.director = director;
+      this._director = director;
       this._runTime = runTime;
     }
 
@@ -78,4 +78,16 @@ class Media {
   // Below is a book instance 
   const Eragon = new Book('Christopher Paolini', 'Eragon', 300);
   Eragon.toggleCheckedOutStatus();
+  console.log(Eragon.isCheckedOut); // prints true 
+  
+  // Below there will be three calls for .addRating() on Eragon with 4, 5, and 5.
+
+  Eragon.addRating(4);
+  Eragon.addRating(5);
+  Eragon.addRating(5);
   console.log(Eragon);
+  console.log(Eragon.getAverageRating()); // returns
+
+  //Below will be a movie instance with the following:
+
+  const speedMovie = new Movie ('Jan De Bont', 'Speed', 116);
