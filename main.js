@@ -10,4 +10,16 @@ class Media {
     this._isCheckedOut = false;
     this._ratings = [];
   }
+
+  get title() {
+    return this._title;
+  }
+
+  get avalibility() {
+    return this._checkoutStatus;
+  }
+
+  get rating() {
+    return this._ratings;
+  }
 }
