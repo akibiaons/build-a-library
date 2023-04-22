@@ -22,4 +22,8 @@ class Media {
   get rating() {
     return this._ratings;
   }
+
+  set avalibility(isCheckedOut) {
+    this._avalibility = isCheckedOut;
+  }
 }
