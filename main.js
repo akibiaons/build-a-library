@@ -36,4 +36,12 @@ class Media {
     return Math.floor(sum / this._ratings.length);
   }
   // Above I created a method that returns the average values of the ratings array.
+  addRating(critic) {
+    this._ratings.push(critic);
+  }
+  // added a method to push ratings into the array...
 }
+
+  class book {
+    
+  }
